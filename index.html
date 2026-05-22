@@ -2024,7 +2024,7 @@ function sendWhatsApp() {
 
   cart.forEach(function(item) {
     var lt   = (item.price * item.qty).toFixed(2).replace('.', ',');
-    var line = '1x ' + item.name + ' \u2014 R$' + lt;
+    var line = item.qty + ' - ' + item.name + ' \u2014 R$' + lt;
     if (item.adicionais && item.adicionais.length > 0) {
       item.adicionais.forEach(function(a) { line += '\n   \u2795 ' + a.name; });
     }
@@ -2033,7 +2033,7 @@ function sendWhatsApp() {
   });
 
   if (maioneseQty > 0) {
-    lines.push(maioneseQty + 'x Maionese Extra \u2014 R$' + (maioneseQty * 1).toFixed(2).replace('.', ','));
+    lines.push(maioneseQty + ' - Maionese Extra \u2014 R$' + (maioneseQty * 1).toFixed(2).replace('.', ','));
   }
 
   lines.push(SEP);
