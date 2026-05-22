@@ -41,7 +41,7 @@ body{font-family:'Barlow',sans-serif;background:var(--cream);color:var(--dark);m
 .badge-destaque{display:inline-flex;align-items:center;gap:6px;background:var(--yellow);color:var(--red);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:12px}
 .section-wrap{padding:0 32px}
 .section-header{display:flex;align-items:flex-end;gap:16px;padding:40px 0 20px;border-bottom:2px solid var(--yellow);margin-bottom:24px}
-.section-number{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--yellow);line-height:1;opacity:0.15;letter-spacing:-2px}
+.section-number{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:72px;color:var(--yellow);line-height:1;opacity:0.35;letter-spacing:-2px}
 .section-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:2px}
 .section-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;text-transform:uppercase;color:var(--dark);line-height:1;letter-spacing:0.5px}
 .items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
@@ -58,6 +58,7 @@ body{font-family:'Barlow',sans-serif;background:var(--cream);color:var(--dark);m
 .tag-art{background:#FFF3CC;color:#C8002A}
 .tag-trad{background:#F0E8D8;color:#5A4A35}
 .tag-frango{background:#E8F4E8;color:#2A6A2A}
+.tag-chicken{background:#FFF0D4;color:#8B4500}
 .tag-hot{background:#FFE8E8;color:#C8002A}
 .price-box{background:var(--red);color:var(--yellow);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;padding:6px 14px;border-radius:6px;letter-spacing:0.5px;min-width:72px;text-align:center;white-space:nowrap;flex-shrink:0}
 .cart-controls{margin-top:8px}
@@ -769,6 +770,7 @@ body.cart-open { overflow: hidden; touch-action: none; }
     <a href="#kicoco" class="cat-btn">Ki-Cocó</a>
     <a href="#especiais" class="cat-btn">Especiais</a>
     <a href="#artesanais" class="cat-btn">Artesanais</a>
+    <a href="#chicken" class="cat-btn">Chicken</a>
     <a href="#batatas" class="cat-btn">Batatas</a>
     <a href="#adicionais" class="cat-btn">Adicionais</a>
     <a href="#bebidas" class="cat-btn">Bebidas</a>
@@ -1268,9 +1270,105 @@ body.cart-open { overflow: hidden; touch-action: none; }
 
 
   <div class="section-divider"></div>
-  <div class="section-wrap" id="batatas">
+  <div class="section-wrap" id="chicken">
     <div class="section-header">
       <div class="section-number">05</div>
+      <div class="section-title-block">
+        <div class="section-tag">Bife de Frango Empanado</div>
+        <h2 class="section-title">Chicken</h2>
+      </div>
+    </div>
+    <div class="items-grid">
+<div class="item-card destaque">
+  <div class="item-name">Clássico</div>
+  <div class="item-desc"><strong>Pão, Bife de Frango Empanado, Alface, Tomate e Batata Palha.</strong></div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 14</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Clássico" data-price="14"><button class="btn-personalizar" data-n="Chicken Clássico" data-p="14" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Clássico" data-p="14" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken com Queijo</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Queijo, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 19</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken com Queijo" data-price="19"><button class="btn-personalizar" data-n="Chicken com Queijo" data-p="19" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken com Queijo" data-p="19" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Presunto e Queijo</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Presunto, Queijo, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 23</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Presunto e Queijo" data-price="23"><button class="btn-personalizar" data-n="Chicken Presunto e Queijo" data-p="23" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Presunto e Queijo" data-p="23" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Bacon</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Bacon, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 21</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Bacon" data-price="21"><button class="btn-personalizar" data-n="Chicken Bacon" data-p="21" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Bacon" data-p="21" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Egg</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Ovo, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 17</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Egg" data-price="17"><button class="btn-personalizar" data-n="Chicken Egg" data-p="17" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Egg" data-p="17" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Egg Bacon</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Bacon, Ovo, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 24</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Egg Bacon" data-price="24"><button class="btn-personalizar" data-n="Chicken Egg Bacon" data-p="24" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Egg Bacon" data-p="24" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Cheddar</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Cheddar, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 21</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Cheddar" data-price="21"><button class="btn-personalizar" data-n="Chicken Cheddar" data-p="21" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Cheddar" data-p="21" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Catupiry</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Catupiry, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 21</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Catupiry" data-price="21"><button class="btn-personalizar" data-n="Chicken Catupiry" data-p="21" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Catupiry" data-p="21" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+<div class="item-card">
+  <div class="item-name">Chicken Cream Cheese</div>
+  <div class="item-desc">Pão, Bife de Frango Empanado, Cream Cheese, Alface, Tomate.</div>
+  <div class="item-footer">
+    <div class="item-tags"><span class="tag tag-chicken">Chicken</span></div>
+    <div class="price-box">R$ 21</div>
+  </div>
+  <div class="cart-controls" data-name="Chicken Cream Cheese" data-price="21"><button class="btn-personalizar" data-n="Chicken Cream Cheese" data-p="21" onclick="abrirPersonalizar(this.dataset.n,parseFloat(this.dataset.p),this)">&#10024; Personalizar</button><button class="btn-add-item" data-n="Chicken Cream Cheese" data-p="21" onclick="addItem(this.dataset.n, parseFloat(this.dataset.p), this)">+ Adicionar</button></div>
+</div>
+
+    </div>
+  </div>
+
+
+  <div class="section-divider"></div>
+  <div class="section-wrap" id="batatas">
+    <div class="section-header">
+      <div class="section-number">06</div>
       <div class="section-title-block">
         <div class="section-tag">Para acompanhar</div>
         <h2 class="section-title">BATATAS</h2>
@@ -1370,7 +1468,7 @@ body.cart-open { overflow: hidden; touch-action: none; }
   <div class="section-divider"></div>
   <div class="section-wrap" id="adicionais">
     <div class="section-header">
-      <div class="section-number">06</div>
+      <div class="section-number">07</div>
       <div class="section-title-block">
         <div class="section-tag">Personalize seu lanche</div>
         <h2 class="section-title">Adicionais</h2>
@@ -1393,6 +1491,7 @@ body.cart-open { overflow: hidden; touch-action: none; }
       <div class="adicional-item"><span class="adicional-name">Frango Desfiado</span><span class="adicional-price">R$ 7</span></div>
       <div class="adicional-item"><span class="adicional-name">Trocar bife p/ Artesanal</span><span class="adicional-price">R$ 10</span></div>
       <div class="adicional-item"><span class="adicional-name">Maionese Extra</span><span class="adicional-price">R$ 1</span></div>
+      <div class="adicional-item"><span class="adicional-name">Chicken Empanado</span><span class="adicional-price">R$ 8</span></div>
     </div>
   </div>
 
@@ -1400,7 +1499,7 @@ body.cart-open { overflow: hidden; touch-action: none; }
   <div class="section-divider"></div>
   <div class="section-wrap" id="bebidas">
     <div class="section-header">
-      <div class="section-number">07</div>
+      <div class="section-number">08</div>
       <div class="section-title-block">
         <div class="section-tag">Para acompanhar</div>
         <h2 class="section-title">Bebidas</h2>
@@ -2005,7 +2104,7 @@ var ADICIONAIS_DATA = [
   {n:'Cream Cheese',p:7},{n:'Milho Verde',p:2},{n:'Batata Palha',p:2},{n:'Ovo',p:3},
   {n:'Cebola',p:4},{n:'Cebola Caramelizada',p:6},{n:'Bife Artesanal 180g',p:10},
   {n:'Bife Tradicional',p:3},{n:'Bacon',p:7},{n:'Frango Desfiado',p:7},
-  {n:'Trocar bife p/ Artesanal',p:10},{n:'Maionese Extra',p:1}
+  {n:'Trocar bife p/ Artesanal',p:10},{n:'Maionese Extra',p:1},{n:'Chicken Empanado',p:8}
 ];
 
 function abrirPersonalizar(name, price, btn) {
